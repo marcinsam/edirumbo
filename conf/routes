@@ -1,0 +1,8 @@
+GET   /                     pl.marboz.scala.edirumbo.root.RootController.index
+GET   /movies               pl.marboz.scala.edirumbo.api.MovieController.getMovies(after: Option[LocalDateTime], before: Option[LocalDateTime])
+POST  /movie                pl.marboz.scala.edirumbo.api.MovieController.add
+GET   /reservations         pl.marboz.scala.edirumbo.api.ReservationController.getFreeReservations(movieRoomId:Long)
+POST  /reservations         pl.marboz.scala.edirumbo.api.ReservationController.book
+POST  /reservations-group   pl.marboz.scala.edirumbo.api.ReservationController.bookGroup
+GET   /reservations-all     pl.marboz.scala.edirumbo.api.ReservationController.getAllReservations(movieRoomId:Long)
+POST  /recommend            pl.marboz.scala.edirumbo.api.RecommendationController.recommend(movieRoomId:Int)
